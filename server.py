@@ -1,3 +1,7 @@
+"""
+This is the Flask server file for the Emotion Detection application.
+It handles web requests and renders the user interface.
+"""
 from flask import Flask, render_template, request
 from EmotionDetection import emotion_detector
 
@@ -5,10 +9,13 @@ app = Flask("Emotion Detector")
 
 @app.route("/emotionDetector")
 def sent_detector():
+    """
+    Analyzes the text provided by the user using the emotion_detector package
+    and returns a formatted string containing emotion scores and the dominant emotion.
+    """
     text_to_analyze = request.args.get('textToAnalyze')
     
     response = emotion_detector(text_to_analyze)
-    
     dominant_emotion = response['dominant_emotion']
     
     if dominant_emotion is None:
@@ -28,6 +35,9 @@ def sent_detector():
 
 @app.route("/")
 def render_index_page():
+    """
+    Renders the main index HTML page for the application.
+    """
     return render_template('index.html')
 
 if __name__ == "__main__":

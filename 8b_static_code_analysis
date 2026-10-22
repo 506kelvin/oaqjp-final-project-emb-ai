@@ -1,0 +1,10 @@
+************* Module server
+server.py:17:0: C0303: Trailing whitespace (trailing-whitespace)
+server.py:20:0: C0303: Trailing whitespace (trailing-whitespace)
+server.py:23:0: C0303: Trailing whitespace (trailing-whitespace)
+server.py:29:0: C0303: Trailing whitespace (trailing-whitespace)
+server.py:5:0: E0401: Unable to import 'flask' (import-error)
+
+-----------------------------------
+Your code has been rated at 5.26/10
+
